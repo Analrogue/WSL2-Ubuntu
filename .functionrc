@@ -88,14 +88,20 @@ git status
 }
 
 gitremove() {
+echo '>> git pull origin main'
 git pull origin main
+echo -e "\n"'>> git rm '"$@"
 git rm $@
+echo -e "\n"'>> git commit -m '\''remove '\'"$@"
 git commit -m 'remove '"$@"
+echo -e "\n"'>> git push origin main'
 git push origin main
+echo -e "\n"'>> git status'
 git status
 }
 
 gitproblem() {
+echo '>> git config pull.rebase false'
 git config pull.rebase false
 }
 
