@@ -1,0 +1,72 @@
+# Alias Group List
+alias aliasfunction='echo -e "사용법:<groupname>cmd - command list \n\
+docker(F) \n\
+exa \n\
+find(F) \n\
+font \n\
+github \n\
+pkg \n\
+"'
+
+# Rc
+
+alias zshrc='vim ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
+alias aliasrc='vim ~/.aliasrc'
+alias functionrc='vim ~/.functionrc'
+alias configrc='vim ~/.configrc'
+
+
+
+# Exa
+alias lsls='echo exa --icons;exa --icons'
+alias lsal='echo exa --icons --long --all;exa --icons --long --all'
+alias lsl='echo exa --icons -lbF --git;exa --icons -lbF --git'                    
+alias lsll='echo exa --icons -lbGF --git;exa --icons -lbGF --git'
+alias lsllm='echo exa --icons -lbGF --git --sort=modified;exa --icons -lbGF --git --sort=modified'
+alias lslS='echo exa --icons -1;exa --icons -1'
+alias lslt='exa --icons --tree --level=2;exa --icons --tree --level=2'
+alias aliasexa='echo -e "ls=exa --icons \n\
+lsal=exa --icons --long --all \n\
+lsl=exa --icons -lbF --git \n\
+lsll=exa --icons -lbGF --git \n\
+lsllm=exa --icons -lbGF --git --sort=modified \n\
+lslS=exa --icons -1 \n\
+lslt=exa --icons --tree --level=2"'
+
+
+# Sudo (caution: following sudo, space)
+alias sudo="sudo "
+
+
+
+# Pkg
+# All installed file for specific package
+alias pkgfile='apt-file list'" $*"
+alias pkginstall='apt list --installed | grep '"$*"
+alias aliaspkg='echo -e "패키지 관련 모든파일 - alias:pkgfile, command: apt-file list \n\
+설치된 패키지 확인 - alias: pkginstall, command: apt list --installed | grep  " '
+
+
+# Font
+alias fontlist='fc-list'
+alias fontlistkr='fc-list :lang=ko'
+alias fontsearch='fc-list | grep '"$*"
+alias fontcache='fc-cache -f -v'
+alias fontdir='echo /usr/share/fonts/'
+alias aliasfont='echo -e "사용가능한 폰트확인 - alias: fontlist, command: fc-list \n\
+시스템에 있는 설치된 폰트캐쉬 - alias: fontcache, command: fc-cache -f -v \n\
+한글폰트확인 - alias: fontlistkr, command: fc-list :langko \n\
+폰트위치 - alias: fontdir \n\
+폰트검색 - alias: fontsearch"'
+
+# Github
+alias gitubuntu='cd ~/.dotfiles/.github/WSL2-Ubuntu/'
+alias aliasgit='echo -e "WSL2-Ubutu Repository : aliasgit : cd ~/.dotfiles/.github/WSL2-Ubuntu/ \n\
+"'
+
+# ETC
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias ..='cd ..'

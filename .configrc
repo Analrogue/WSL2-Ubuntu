@@ -1,0 +1,60 @@
+# Source
+source ~/.aliasrc
+source ~/.functionrc
+
+
+
+# Input
+
+
+
+# Option Configuration
+## history no 'first space', 'duplicate'
+export HISTCONTROL=ignoreboth
+
+
+
+# Display
+#Colored Grep_Colors
+#alias ls='ls --color=auto'
+alias grep='grep --color=always'
+export GREP_COLORS='ms=31:mc=32:sl=33:cx=36:fn=33:ln=34:bn=37:se=32'
+#export GREP_COLORS='ms=31:mc=32:sl=35:cx=36:fn=33:ln=34:bn=37:se=32'
+
+#Colored Man Page Reference
+#https://wiki.archlinux.org/title/Color_output_in_console#man
+
+#Manpager (Default with Color. Config File ~/.mostrc)
+export MANPAGER="most"
+
+#Colored Man Page (with less)
+#export MANPAGER="less -R --use-color -Dd+r -Du+b"
+#export MANPAGER="less"
+
+
+#export LESS="--RAW-CONTROL-CHARS"
+#[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
+#export LESS_TERMCAP_mb=$'\e[1;31m'     # begin bold
+#export LESS_TERMCAP_md=$'\e[1;33m'     # begin blink
+#export LESS_TERMCAP_so=$'\e[01;44;37m' # begin reverse video
+#export LESS_TERMCAP_us=$'\e[01;37m'    # begin underline
+#export LESS_TERMCAP_me=$'\e[0m'        # reset bold/blink
+#export LESS_TERMCAP_se=$'\e[0m'        # reset reverse video
+#export LESS_TERMCAP_ue=$'\e[0m'        # reset underline
+#export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
+
+
+#Colored Man Page (with bat)
+#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+#export MANROFFOPT="-c"
+
+
+
+# PATH
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.local/share:$HOME/.local/bin:$PATH"
+
+# Startup
+fm6000 -rd ~/.dotfiles/.asciiarts --color random -d WSL2
+
+
