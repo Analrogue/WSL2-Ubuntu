@@ -24,7 +24,7 @@ clear && echo "source zshrc .." | colout "(\w|\W)" rainbow && source ~/.zshrc
 
 #grep
 grepc() {
-grep -E "$1|$" $2 | colout "^.*$" Random
+grep -E "$1|$" $2 | colout "^.*$" Random | less -R
 }
 
 #man 
@@ -34,7 +34,7 @@ man $1 | colout "^.*$" Random | less -R
 
 #--help
 helpc() {
-$1 --help | colout "^.*$" Random
+$1 --help | colout "^.*$" Random | less -R
 }
 
 
