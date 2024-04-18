@@ -80,6 +80,7 @@ gitpush() {
 git add .
 git commit -m 'ubuntu basic configuration file'
 git push
+git status
 }
 
 gitremove() {
@@ -87,6 +88,7 @@ git pull origin main
 git rm $@
 git commit -m 'remove '"$@"
 git push origin main
+git status
 }
 
 gitproblem() {
