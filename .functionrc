@@ -79,11 +79,11 @@ cd ~/.dotfiles/.github/WSL2-Ubuntu/
 gitpush() {
 echo '>> git add .'
 git add .
-echo \n'>> git commit -m '\''ubuntu basic configuration file'\'
+echo -e "\n"'>> git commit -m '\''ubuntu basic configuration file'\'
 git commit -m 'ubuntu basic configuration file'
-echo \n'>> git push'
+echo -e "\n"'>> git push'
 git push
-echo \n'>> git status'
+echo -e "\n"'>> git status'
 git status
 }
 
