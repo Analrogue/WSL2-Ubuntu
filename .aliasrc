@@ -62,7 +62,9 @@ alias aliasfont='echo -e "사용가능한 폰트확인 - alias: fontlist, comman
 
 # Github
 alias gitubuntu='cd ~/.dotfiles/.github/WSL2-Ubuntu/'
-alias aliasgit='echo -e "WSL2-Ubutu Repository : aliasgit : cd ~/.dotfiles/.github/WSL2-Ubuntu/ \n\
+alias push='git add . && git commit -m '"'ubuntu'"' && git push'
+alias aliasgit='echo -e "WSL2-Ubutu Repository : gitubuntu : cd ~/.dotfiles/.github/WSL2-Ubuntu/ \n\
+add,commit,push : push : git add . && git commit -m "ubuntu" && git push \n\
 "'
 
 # ETC
