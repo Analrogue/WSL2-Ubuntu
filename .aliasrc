@@ -8,6 +8,7 @@ git(F) \n\
 pkg \n\
 "'
 
+
 # Rc
 
 alias zshrc='vim ~/.zshrc'
@@ -44,8 +45,12 @@ alias sudo="sudo "
 # All installed file for specific package
 alias pkgfile='apt-file list'" $*"
 alias pkginstall='apt list --installed | grep '"$*"
-alias aliaspkg='echo -e "패키지 관련 모든파일 - alias:pkgfile, command: apt-file list \n\
-설치된 패키지 확인 - alias: pkginstall, command: apt list --installed | grep  " '
+alias aliaspkg='echo -e "패키지 관련 모든파일 : pkgfile : apt-file list \n\
+설치된 패키지 확인 : pkginstall : apt list --installed | grep \n\
+dpkg 설치 : dpkg -i(--install) 패키지 \n\
+설치된 dpkg 검색 : dpkg -l(--list) 패키지 또는  패키지 대신 | grep 패키지패턴 \n\
+dpkg 삭제 : dpkg --purge 패키지 \n\
+"'
 
 
 # Font
