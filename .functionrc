@@ -1,0 +1,71 @@
+# Path
+# ~/.zshrc
+# ~/.aliasrc
+# ~/.vimrc
+
+# Reference
+#colout : text output colorization : https://nojhan.github.io/colout/
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+function ../. {
+clear && echo "source zshrc .." | colout "(\w|\W)" rainbow && source ~/.zshrc
+}
+
+# Output Colorization
+
+#grepcc() {
+#grep --color=always -E "$1|$" $2
+#}
+#mancc() {
+#man $1 | grepc '(^|\s)(\-){1,2}(\w+(\-){0,2}\w*(\-){0,2}\w*={0,1}\w*|\s)'| less -R
+#}
+
+#grep
+grepc() {
+grep -E "$1|$" $2 | colout "^.*$" Random
+}
+
+#man 
+manc() {
+man $1 | colout "^.*$" Random | less -R
+}
+
+#--help
+helpc() {
+$1 --help | colout "^.*$" Random
+}
+
+
+# Docker
+function container {
+echo docker ps -a --formant "table {{.ID}}\\\t{{.Names}}\\\t{{.Status}}"
+docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"
+#alias container='echo docker ps -a --formant "table {{.ID}}\\\t{{.Names}}\\\t{{.Status}}";\
+#docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"'
+}
+
+function image {
+echo "docker image list"
+docker image list
+}
+
+function dockerbash {
+echo "docker exec -it $@ bash"	
+#docker exec -it $@ bash
+eval "$(echo docker exec -it $@ bash)"
+} 
+
+alias aliasdocker='echo -e "컨테이너 리스트 - container \n\
+이미지리스트 - image \n\
+콘테이너 진입 - dockersh <container>"'
+
+
+
+# Find
+function fd() {
+	sudo find / ! \( -path '/mnt' -prune \) -name "$1" 2>&1 | grep -v "File system loop detected"
+}
+alias fnd='find / ! \( -path "/mnt" -prune \) -name'
+alias aliasfind='echo -e "alias: fd or fnd, command: find / ! \( -path "/mnt" -prune \) -name"'
