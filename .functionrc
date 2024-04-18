@@ -89,7 +89,14 @@ git commit -m 'remove '"$@"
 git push origin main
 }
 
+gitproblem() {
+git config pull.rebase false
+}
+
 alias aliasgit='echo -e "cdgit : cd ~/.dotfiles/.github/WSL2-Ubuntu/ \n\
 gitpush : git add . && git commit -m && git push \n\
 gitremove : git pull && git rm (file) && git commit -m && git push origin main \n\
+gitproblem : git config pull.rebase false (remote origin branch change import and merge local) \n\
 "'
+
+
