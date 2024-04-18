@@ -69,3 +69,27 @@ function fd() {
 }
 alias fnd='find / ! \( -path "/mnt" -prune \) -name'
 alias aliasfind='echo -e "alias: fd or fnd, command: find / ! \( -path "/mnt" -prune \) -name"'
+
+
+# Github
+cdgit() {
+cd ~/.dotfiles/.github/WSL2-Ubuntu/
+}
+
+gitpush() {
+git add .
+git commit -m 'ubuntu basic configuration file'
+git push
+}
+
+gitremove() {
+git pull origin main
+git rm $@
+git commit -m 'remove '"$@"
+git push origin main
+}
+
+alias aliasgit='echo -e "cdgit : cd ~/.dotfiles/.github/WSL2-Ubuntu/ \n\
+gitpush : git add . && git commit -m && git push \n\
+gitremove : git pull && git rm (file) && git commit -m && git push origin main \n\
+"'

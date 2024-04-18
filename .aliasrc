@@ -4,7 +4,7 @@ docker(F) \n\
 exa \n\
 find(F) \n\
 font \n\
-github \n\
+git \n\
 pkg \n\
 "'
 
@@ -60,11 +60,9 @@ alias aliasfont='echo -e "사용가능한 폰트확인 - alias: fontlist, comman
 폰트위치 - alias: fontdir \n\
 폰트검색 - alias: fontsearch"'
 
-# Github
-alias gitubuntu='cd ~/.dotfiles/.github/WSL2-Ubuntu/'
-alias push='git add . && git commit -m '"'ubuntu'"' && git push'
-alias aliasgit='echo -e "WSL2-Ubutu Repository : gitubuntu : cd ~/.dotfiles/.github/WSL2-Ubuntu/ \n\
-add,commit,push : push : git add . && git commit -m "ubuntu" && git push \n\
+
+alias aliasgit='echo -e "WSL2-Ubutu Repository : cdgit : cd ~/.dotfiles/.github/WSL2-Ubuntu/ \n\
+add,commit,push : gitpush : git add . && git commit -m "ubuntu" && git push \n\
 "'
 
 # ETC
