@@ -20,13 +20,13 @@ alias configrc='vim ~/.configrc'
 
 
 # Exa
-alias lsls='echo exa --icons;exa --icons'
-alias lsal='echo exa --icons --long --all;exa --icons --long --all'
-alias lsl='echo exa --icons -lbF --git;exa --icons -lbF --git'                    
-alias lsll='echo exa --icons -lbGF --git;exa --icons -lbGF --git'
-alias lsllm='echo exa --icons -lbGF --git --sort=modified;exa --icons -lbGF --git --sort=modified'
-alias lslS='echo exa --icons -1;exa --icons -1'
-alias lslt='exa --icons --tree --level=2;exa --icons --tree --level=2'
+alias ls='echo exa --icons | colout "(\w|\W)" rainbow  && exa --icons'
+alias lsal='echo exa --icons --long --all | colout "(\w|\W)" rainbow && exa --icons --long --all'
+alias lsl='echo exa --icons -lbF --git | colout "(\w|\W)" rainbow && exa --icons -lbF --git'
+alias lsll='echo exa --icons -lbGF --git | colout "(\w|\W)" rainbow && exa --icons -lbGF --git'
+alias lsllm='echo exa --icons -lbGF --git --sort=modified | colout "(\w|\W)" rainbow && exa --icons -lbGF --git --sort=modified'
+alias lslS='echo exa --icons -1 | colout "(\w|\W)" rainbow && exa --icons -1'
+alias lslt='echo exa --icons --tree --level=2 | colout "(\w|\W)" rainbow && exa --icons --tree --level=2'
 alias aliasexa='echo -e "ls=exa --icons \n\
 lsal=exa --icons --long --all \n\
 lsl=exa --icons -lbF --git \n\
