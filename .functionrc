@@ -34,6 +34,13 @@ helpc() {
 $1 --help | colout "^.*$" Random | less -R
 }
 
+#info
+infoc() {
+info $1 | colout "^.*$" Random | less -R
+}
+
+
+
 
 # Docker
 container() {

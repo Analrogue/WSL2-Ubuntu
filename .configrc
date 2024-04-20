@@ -6,7 +6,13 @@ source ~/.functionrc
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Input
-
+# Hangul IM fcitx configuration
+export QT_IM_MODULE=fcitx
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export DefaultIMModule=fcitx
+#optional
+fcitx-autostart &>/dev/null
 
 
 # Option Configuration
