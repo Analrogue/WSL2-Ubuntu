@@ -68,9 +68,13 @@ alias aliasfont='echo -e "사용가능한 폰트확인 - alias: fontlist, comman
 # Weatehr
 alias weather1="curl 'ko.wttr.in/서울?format=%l:+%m+%c+바람:%w+기온:%t+습도:%h\n'"
 alias weather2="curl ko.wttr.in/서울"
+alias weather3="curl 'v2d.wttr.in/Seoul'"
 
 # ETC
 alias ls='ls --color=auto'
 alias mv='mv -i'
 alias rm='rm -i'
 alias ..='cd ..'
+alias xmerge='xrdb -merge ~/.Xresources'
+alias xconfig='vim ~/.Xresources'
+

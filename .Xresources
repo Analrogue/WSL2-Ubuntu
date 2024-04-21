@@ -1,0 +1,12 @@
+! For both xterm and uxterm
+XTerm*background: black
+XTerm*foreground: white
+XTerm*faceName: Monospace
+XTerm*faceSize: 14
+XTerm*vt100.geometry: 100x35
+
+UXTerm*background: black
+UXTerm*foreground: white
+UXTerm*faceName: DejaVuSansMono
+UXTerm*faceSize: 18
+UXTerm*vt100.geometry: 134x33
