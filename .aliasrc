@@ -77,4 +77,4 @@ alias rm='rm -i'
 alias ..='cd ..'
 alias xmerge='xrdb -merge ~/.Xresources'
 alias xconfig='vim ~/.Xresources'
-
+alias uxterm='echo -e "xrdb -merge ~/.Xresources && uxterm& \n" && xmerge && uxterm&'
