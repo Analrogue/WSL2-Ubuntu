@@ -110,6 +110,8 @@ echo '>> git config pull.rebase false'
 git config pull.rebase false
 }
 
+alias push='cdgit && gitpush && ~'
+
 alias aliasgit='echo -e "cdgit : cd ~/.dotfiles/.github/WSL2-Ubuntu/ \n\
 gitpush : git add . && git commit -m && git push \n\
 gitremove : git pull && git rm (file) && git commit -m && git push origin main \n\
