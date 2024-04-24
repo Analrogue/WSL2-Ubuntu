@@ -78,3 +78,7 @@ alias ..='cd ..'
 alias xmerge='xrdb -merge ~/.Xresources'
 alias xconfig='vim ~/.Xresources'
 alias uxterm='echo -e "xrdb -merge ~/.Xresources && uxterm& \n" && xmerge && uxterm&'
+
+
+# MISC
+alias aliasmusic='echo "cmus,moc(mocp),musikcube"'
