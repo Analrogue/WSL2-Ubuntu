@@ -46,13 +46,19 @@ alias sudo="sudo "
 # Pkg
 # All installed file for specific package
 alias pkgfile="echo -e apt-file list \'keyword\' | colout \"(\w|\W)\" rainbow && apt-file list"
-alias pkglist1='echo -e "dpkg --get-selection" && dpkg --get-selections'
+alias pkglist='echo -e "dpkg --get-selection" && dpkg --get-selections'
 alias pkglist2='echo -e "apt list --installed" && apt list --installed'
+alias pkginfo='echo -e "dpkg --print-avail | grep" && dpkg --print-avail | grep'
+alias pkginfo2='echo -e "apt-cache showpkg" && apt-cache showpkg'
+alias pkgsearch='echo -e "apt-cache pkgnames" && apt-cache pkgnames'
 alias pkgremove='echo -e "apt clean && apt autoremove" && apt clean && apt autoremove'
 alias aliaspkg='echo -e "패키지가 설치한 모든 파일 : pkgfile : apt-file list \n\
-설치된 모든 패키지(short,dpkg) : pkglist1 : dpkg --get-selections \n\
+설치된 모든 패키지(short,dpkg) : pkglist : dpkg --get-selections \n\
 설치된 모든 패키지(long, dpkg) : dpkg -l \n\
 설치된 모든 패키지(apt) : pkglist2 : apt list --installed \n\
+패키지정보 : pkginfo : dpkg --print-avail | grep \n\
+패키지정보 : pkginfo2 : apt-cache showpkg \n\
+패키지검색 : pkgsearch : apt-cache pkgnames \n\
 찌꺼기 및 비의존성 패키지 제거 : pkgremove : apt clean && apt autoremove \n\
 패키지정보 : apt(-cache) show  \n\
 패키지 의존성 : apt(-cache) depends \n\
