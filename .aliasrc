@@ -102,4 +102,7 @@ alias aliasxterm='echo -e " \n\
 "'
 
 # MISC
-alias aliasmusic='echo -e "cmus,moc(mocp),musikcube"'
+alias aliasmusic='echo -e "moc(mocp) \n\
+cmus \n\
+musikcube \n\
+"'
