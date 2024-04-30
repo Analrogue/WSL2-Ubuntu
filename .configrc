@@ -14,6 +14,15 @@ export DefaultIMModule=fcitx
 #optional
 fcitx-autostart &>/dev/null
 
+# Pulse Audio Configuration
+export HOST_IP="$(ip route |awk '/^default/ {print $3}')"
+export PULSE_SERVER="tcp:$HOST_IP"
+
+# Fzf
+export FZF_DEFAULT_COMMAND="fdfind --hidden --strip-cwd-prefix --exclude=.git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fdfind --type=d --hidden --strip-cwd-prefix --exclude=.git"
+
 
 # Option Configuration
 ## history no 'first space', 'duplicate'
@@ -55,6 +64,8 @@ export MANPAGER="most"
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 #export MANROFFOPT="-c"
 
+# BAT
+export BAT_THEME="Dracula" 
 
 
 # PATH

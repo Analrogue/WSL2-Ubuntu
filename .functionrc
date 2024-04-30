@@ -68,12 +68,43 @@ alias aliasdocker='echo -e "컨테이너 리스트 - container \n\
 
 
 # Find
-fd() {
+alias fd='fdfind'
+finds() {
 echo "find / ! \( -path '/mnt' -prune \) -name 'keyword'"
-sudo find / ! \( -path '/mnt' -prune \) -name "$1" 2>&1 | grep -v "File system loop detected"
+sudo find / ! \( -path '/mnt' -prune \) -name "$1" 2>&1 | grep -v "File system loop detected" | grep -v "Permission denied"
 }
-alias fnd='find / ! \( -path "/mnt" -prune \) -name'
-alias aliasfind='echo -e "alias: fd or fnd, command: find / ! \( -path "/mnt" -prune \) -name"'
+
+fdd() {
+echo 'fd --exclude=/mnt -H -td $@'
+fd --exclude=/mnt -H -td $@ /
+}
+
+fdf() {
+echo 'fd --exclude=/mnt -H -tf $@'
+fd --exclude=/mnt -H -tf $@ /
+}
+
+fde() {
+echo 'fd --exclude=/mnt -H -e $@'
+fd --exclude=/mnt -H -e $@ /
+}
+
+fdfd() {
+echo 'fd --exclude=/mnt -H -tf -td $@'
+fd --exclude=/mnt -H -tf -td $@ /
+}
+
+# double condtion three type example
+# | grep -e pattern1 -e pattern2
+# | grep pattern1 | grep pattern2
+# | grep -e pattern1 -e pattern2
+# alias fnd='find / ! \( -path "/mnt" -prune \) -name'
+alias aliasfind='echo -e "fdd : Directory : fd --exclucde=/mnt -H -td \$@ \n\
+fdf : File : fd --exclucde=/mnt -H -tf \$@ \n\
+fde [extension] [keyword] : File Extension : fd --exclude=/mnt -H -e \$1 \$@ \n\
+fdfd : File-Directory : fd --exclude=/mnt -H -tf -td \$@ \n\
+finds : Find Search : find / ! \( -path "/mnt" -prune \) -name \n\
+"'
 
 
 # Github
