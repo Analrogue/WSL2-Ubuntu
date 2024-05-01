@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/bash:w
 # Docker 서비스 파일 경로
 DOCKER_SERVICE_FILE="/lib/systemd/system/docker.service"
 
