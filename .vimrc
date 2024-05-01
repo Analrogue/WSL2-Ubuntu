@@ -1,3 +1,4 @@
+" Theme Configuration
 function! SetColorscheme()
     if expand('%:t') !~? '\v\.*rc$'
         colorscheme dracula
@@ -8,3 +9,7 @@ endfunction
 
 autocmd BufEnter * call SetColorscheme()
 
+
+" NERDTree
+" Hidden F/D Show
+let NERDTreeShowHidden=1
