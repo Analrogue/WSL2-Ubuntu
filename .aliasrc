@@ -111,8 +111,7 @@ musikcube \n\
 "'
 
 alias ubuntuversion='echo -e "Ubuntu Version 확인 \n\
-lsb_release -a \n\
-lsb_release -d \n\
+lsb_release -a or -d or -r \n\
 cat /etc/issue \n\
 cat /ect/os-release \n\
 hostnamectl \n\
