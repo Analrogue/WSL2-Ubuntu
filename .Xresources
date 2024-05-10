@@ -2,8 +2,8 @@
 XTerm*background: black
 XTerm*foreground: white
 XTerm*faceName: Monospace
-XTerm*faceSize: 14
-XTerm*vt100.geometry: 100x35
+XTerm*faceSize: 18
+XTerm*vt100.geometry: 136x33
 
 UXTerm*background: black
 UXTerm*foreground: white
