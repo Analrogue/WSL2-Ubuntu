@@ -109,3 +109,11 @@ alias aliasmusic='echo -e "moc(mocp) \n\
 cmus \n\
 musikcube \n\
 "'
+
+alias ubuntuversion='echo -e "Ubuntu Version 확인 \n\
+lsb_release -a \n\
+lsb_release -d \n\
+cat /etc/issue \n\
+cat /ect/os-release \n\
+hostnamectl \n\
+"'
