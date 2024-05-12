@@ -94,22 +94,21 @@ alias ..='cd ..'
 alias update='echo -e "sudo apt update && sudo apt upgrade -y \n" && sudo apt update && sudo apt upgrade -y'
 
 # Xterm
-alias xmerge='xrdb -merge ~/.Xresources'
-alias xconfig='vim ~/.Xresources'
-#alias uxterm='echo -e "xrdb -merge ~/.Xresources && uxterm& \n" && xmerge && uxterm&'
-alias xmocp='uxterm -e mocp &'
+alias xmerge='echo -e "xrdb -merge ~/.Xresources \n" && xrdb -merge ~/.Xresources'
+alias xconfig='echo -e "vim ~/.Xresources \n" && vim ~/.Xresources'
 alias aliasxterm='echo -e " \n\
 환경설정 적용 : xmerge : xrdb -merge ~/.Xresources \n\
 환경설정 편집 : xconfig : vim ~/.Xresources \n\
-환경설정적용 및 uxterm 실행 : uxterm : xmerge && uxterm& \n\
 "'
 
 # MISC
+alias xmocp='echo -e "uxterm -e mocp & \n" && uxterm -e mocp &'
 alias aliasmusic='echo -e "moc(mocp) \n\
 config file : ~/.moc/config \n\
 themes directory : \n\
 /usr/share/moc/themes/ \n\
 ~/.moc/themes/ \n\
+uxterm 실행 : xmocp : uxterm -e mocp & \n\
 \n\
 cmus \n\
 musikcube \n\
