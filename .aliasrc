@@ -106,6 +106,11 @@ alias aliasxterm='echo -e " \n\
 
 # MISC
 alias aliasmusic='echo -e "moc(mocp) \n\
+config file : ~/.moc/config \n\
+themes directory : \n\
+/usr/share/moc/themes/ \n\
+~/.moc/themes/ \n\
+\n\
 cmus \n\
 musikcube \n\
 "'
