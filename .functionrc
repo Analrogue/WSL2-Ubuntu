@@ -113,6 +113,8 @@ cd ~/.dotfiles/.github/WSL2-Ubuntu/
 }
 
 gitpush() {
+echo 'pushd ~/.dotfiles/.github/WSL2-Ubuntu/'
+pushd ~/.dotfiles/.github/WSL2-Ubuntu/
 echo '>> git add .'
 git add .
 echo -e "\n"'>> git commit -m '\''ubuntu basic configuration file'\'
@@ -121,6 +123,7 @@ echo -e "\n"'>> git push'
 git push
 echo -e "\n"'>> git status'
 git status
+pushd
 }
 
 gitremove() {
