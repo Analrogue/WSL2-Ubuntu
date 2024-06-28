@@ -5,7 +5,7 @@ XTerm*faceName: Monospace
 XTerm*faceSize: 18
 XTerm*vt100.geometry: 136x33
 
-UXTerm*background: grey13
+UXTerm*background: black
 UXTerm*foreground: white
 UXTerm*faceName: DejaVuSansMono
 UXTerm*faceSize: 18
