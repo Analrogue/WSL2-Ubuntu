@@ -1,0 +1,9 @@
+q
+colorscheme
+status_display_program
+h
+colorscheme onedark
+colorscheme dracula
+colorscheme default
+colorscheme base16-onedark
+set color_win_cur_sel_bg=blue
