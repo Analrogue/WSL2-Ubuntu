@@ -1,0 +1,1 @@
+/home/humornoid/.dotfiles/.github/WSL2-Ubuntu/.config/nvim/init.vim
