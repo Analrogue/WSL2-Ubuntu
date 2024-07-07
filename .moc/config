@@ -1,0 +1,21 @@
+# Theme file. This can be absolute path or relative to
+# /usr/share/moc/themes/ (depends on installation prefix) or ~/.moc/themes/
+# Theme         = example_theme
+ Theme         = red_mycustom_theme
+ PlaylistFullPaths = no
+ MusicDir="/mnt/k/cloud/iptime cloud"
+ FastDir1=${MusicDir}/music/_POP
+ FastDir2="${MusicDir}/music/_Fantasy Music"
+
+ Repeat=no
+ Shuffle=yes
+ AutoNext=yes
+
+ ShowFormat=no
+ HideFileExtension=yes
+
+ SeekTime=5
+ SilentSeekTime=10
+
+#no:file name, yes:tag tile
+ ReadTags=no
