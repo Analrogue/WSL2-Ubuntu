@@ -7,7 +7,7 @@
 #colout : text output colorization : https://nojhan.github.io/colout/
 
 ../.() {
-clear && echo "source zshrc .." | colout "(\w|\W)" rainbow && source ~/.zshrc
+clear && echo "source zshrc .." | colout "(\w|\W)" hash && source ~/.zshrc
 }
 
 # Output Colorization

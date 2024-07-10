@@ -6,6 +6,8 @@
  MusicDir="/mnt/k/cloud/iptime cloud"
  FastDir1=${MusicDir}/music/_POP
  FastDir2="${MusicDir}/music/_Fantasy Music"
+ FastDir3="${MusicDir}/music/_가요"
+ FastDir4="${MusicDir}/music/OST"
 
  Repeat=no
  Shuffle=yes
