@@ -7,7 +7,7 @@
 #colout : text output colorization : https://nojhan.github.io/colout/
 
 ../.() {
-clear && echo "Reload ZSH..." | colout "(\w|\W)" hash && source ~/.zshrc
+clear && echo "Reload ZSH..." | colout "(\w|\W)" hash && sleep 3 && clear && source ~/.zshrc
 }
 
 # Output Colorization
