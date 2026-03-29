@@ -72,13 +72,20 @@ fdd() {
 }
 
 
+# 사용법:
+# fdfd 디렉토리 이후
+# 확장자방식 -e toml -e conf
+# 파일명방식 config
+# glob 패턴 --glob "*.toml"
+# 숨김파일포함 -H
 fdfd() {
-  local file
-  # 기본 패턴은 '*' (모든 파일), 기본 경로는 현재 디렉토리
-  file=$(fd -t f --glob "${2:-*}" ${1:-.} | fzy) || return 1
+  local dir file
+  dir="${1:-.}"
+  shift
+
+  file=$(fd -t f "$@" . "$dir" | fzy) || return 1
   cd "$(dirname "$file")"
 }
-
 
 
 

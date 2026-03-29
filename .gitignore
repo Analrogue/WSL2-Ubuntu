@@ -1,0 +1,12 @@
+.config/**/cache/
+.config/**/Cache/
+.config/**/log/
+.config/**/logs/
+
+.config/**/history*
+.config/**/recent*
+.config/**/state*
+
+.config/**/*.db
+.config/**/*.pid
+.config/**/*.lock
