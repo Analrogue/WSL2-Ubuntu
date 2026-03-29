@@ -1,16 +1,20 @@
 =========================
-FCITX 4.2.9.8 -- Get Signal No.: 11
-Date: try "date -d @1713656355" if you are using GNU date ***
-ProcessID: 560
-fcitx(+0x1b49)[0x55b831e45b49]
-/lib/x86_64-linux-gnu/libc.so.6(+0x42520)[0x7fc528cab520]
-/lib/x86_64-linux-gnu/libfcitx-core.so.0(FcitxAddonsGetAddonByName+0xf)[0x7fc528ecb93f]
-/usr/lib/x86_64-linux-gnu/fcitx/fcitx-xkbdbus.so(+0x58e4)[0x7fc52588a8e4]
-/lib/x86_64-linux-gnu/libdbus-1.so.3(dbus_connection_dispatch+0x599)[0x7fc528a9e869]
-/usr/lib/x86_64-linux-gnu/fcitx/fcitx-dbus.so(+0x3b98)[0x7fc528ae1b98]
-/lib/x86_64-linux-gnu/libfcitx-core.so.0(+0x142fb)[0x7fc528ed42fb]
-/lib/x86_64-linux-gnu/libfcitx-core.so.0(FcitxInstanceRun+0x57)[0x7fc528ed4e37]
-fcitx(+0x14ae)[0x55b831e454ae]
-/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7fc528c92d90]
-/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7fc528c92e40]
-fcitx(+0x1585)[0x55b831e45585]
+FCITX 4.2.9.8 -- Get Signal No.: 6
+Date: try "date -d @1774702175" if you are using GNU date ***
+ProcessID: 622
+fcitx(+0x1b49)[0x5dbcd015db49]
+/lib/x86_64-linux-gnu/libc.so.6(+0x42520)[0x7c98a3042520]
+/lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x12c)[0x7c98a30969fc]
+/lib/x86_64-linux-gnu/libc.so.6(raise+0x16)[0x7c98a3042476]
+/lib/x86_64-linux-gnu/libc.so.6(abort+0xd3)[0x7c98a30287f3]
+/lib/x86_64-linux-gnu/libdbus-1.so.3(+0xbed6)[0x7c98a2fb3ed6]
+/lib/x86_64-linux-gnu/libdbus-1.so.3(_dbus_warn_return_if_fail+0x0)[0x7c98a2fda690]
+/lib/x86_64-linux-gnu/libdbus-1.so.3(dbus_connection_send_with_reply+0x27f)[0x7c98a2fbc17f]
+/usr/lib/x86_64-linux-gnu/fcitx/fcitx-xkbdbus.so(+0x2cd7)[0x7c98a1954cd7]
+/lib/x86_64-linux-gnu/libfcitx-core.so.0(FcitxModuleLoad+0x19d)[0x7c98a329b5dd]
+/lib/x86_64-linux-gnu/libfcitx-core.so.0(+0x1406e)[0x7c98a329906e]
+/lib/x86_64-linux-gnu/libfcitx-core.so.0(FcitxInstanceRun+0x57)[0x7c98a3299e37]
+fcitx(+0x14ae)[0x5dbcd015d4ae]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7c98a3029d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7c98a3029e40]
+fcitx(+0x1585)[0x5dbcd015d585]

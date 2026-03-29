@@ -75,7 +75,7 @@ ZSH_THEME="amresh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git zsh-autosuggestions sudo dirhistory colored-man-pages fzf)
+plugins=(git zsh-autosuggestions sudo dirhistory colored-man-pages fzf) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,5 +112,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
+
+
+source /home/humornoid/.config/broot/launcher/bash/br
+
+
+
+eval "$(zoxide init zsh)"
+# 저장경로:
+# $HOME/.local/share/zoxide/db.zo
 
 

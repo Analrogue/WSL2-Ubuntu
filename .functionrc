@@ -7,7 +7,7 @@
 #colout : text output colorization : https://nojhan.github.io/colout/
 
 ../.() {
-clear && echo "Reload ZSH..." | colout "(\w|\W)" hash && sleep 3 && clear && source ~/.zshrc
+clear && echo "Reload ZSH..." | colout "(\w|\W)" hash && clear && source ~/.zshrc
 }
 
 # Output Colorization
@@ -65,34 +65,49 @@ alias aliasdocker='echo -e "컨테이너 리스트 - container \n\
 이미지리스트 - image \n\
 콘테이너 진입 - dockersh <container>"'
 
+fdd() {
+  local dir
+  dir=$(fd -t d . ${1:-.} | fzy) &&
+  cd "$dir"
+}
+
+
+fdfd() {
+  local file
+  # 기본 패턴은 '*' (모든 파일), 기본 경로는 현재 디렉토리
+  file=$(fd -t f --glob "${2:-*}" ${1:-.} | fzy) || return 1
+  cd "$(dirname "$file")"
+}
+
+
 
 
 # Find
-alias fd='fdfind'
-finds() {
-echo "find / ! \( -path '/mnt' -prune \) -name 'keyword'"
-sudo find / ! \( -path '/mnt' -prune \) -name "$1" 2>&1 | grep -v "File system loop detected" | grep -v "Permission denied"
-}
+#alias fd='fdfind'
+#finds() {
+#echo "find / ! \( -path '/mnt' -prune \) -name 'keyword'"
+#sudo find / ! \( -path '/mnt' -prune \) -name "$1" 2>&1 | grep -v "File system loop detected" | grep -v "Permission denied"
+#}
 
-fdd() {
-echo 'fd --exclude=/mnt -H -td $@'
-fd --exclude=/mnt -H -td $@ /
-}
+#fdd() {
+#echo 'fd --exclude=/mnt -H -td $@'
+#fd --exclude=/mnt -H -td $@ /
+#}
 
-fdf() {
-echo 'fd --exclude=/mnt -H -tf $@'
-fd --exclude=/mnt -H -tf $@ /
-}
+#fdf() {
+#echo 'fd --exclude=/mnt -H -tf $@'
+#fd --exclude=/mnt -H -tf $@ /
+#}
 
-fde() {
-echo 'fd --exclude=/mnt -H -e $@'
-fd --exclude=/mnt -H -e $@ /
-}
+#fde() {
+#echo 'fd --exclude=/mnt -H -e $@'
+#fd --exclude=/mnt -H -e $@ /
+#}
 
-fdfd() {
-echo 'fd --exclude=/mnt -H -tf -td $@'
-fd --exclude=/mnt -H -tf -td $@ /
-}
+#fdfd() {
+#echo 'fd --exclude=/mnt -H -tf -td $@'
+#fd --exclude=/mnt -H -tf -td $@ /
+#}
 
 # double condtion three type example
 # | grep -e pattern1 -e pattern2
@@ -151,5 +166,9 @@ gitpush : git add . && git commit -m && git push \n\
 gitremove : git pull && git rm (file) && git commit -m && git push origin main \n\
 gitproblem : git config pull.rebase false (remote origin branch change import and merge local) \n\
 "'
+
+
+
+
 
 

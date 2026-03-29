@@ -1,0 +1,11 @@
+[manager]
+show_hidden = true
+sort_by = "name"
+sort_reverse = false
+
+[preview]
+enable = true
+backend = "kitty"
+max_width = 1920
+max_height = 1080
+

@@ -127,3 +127,5 @@ cat /etc/issue \n\
 cat /ect/os-release \n\
 hostnamectl \n\
 "'
+
+
