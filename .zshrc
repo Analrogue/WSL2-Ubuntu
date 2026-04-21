@@ -1,5 +1,5 @@
 source ~/.configrc
-
+cd /home/humornoid
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -113,8 +113,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# x11 강제 for kitty
+export KITTY_DISABLE_WAYLAND=1
 
-
+# br사용 broot 로드
 source /home/humornoid/.config/broot/launcher/bash/br
 
 

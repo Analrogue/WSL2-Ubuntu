@@ -1,3 +1,10 @@
+set number
+set relativenumber
+" 이설정을 하면 붙여넣기가 마우스우클릭 -> Ctrl+V
+:set mouse=a
+
+
+
 " Theme Configuration
 function! SetColorscheme()
     if expand('%:t') !~? '\v\.*rc$'
@@ -29,9 +36,15 @@ set fileformats=unix,dos
 set fileformat=unix
 
 
-" mouse
-" 이설정을 하면 붙여넣기가 마우스우클릭 -> Ctrl+V
-:set mouse=a
+
+
+
+" shortcut
+"^M: cr제거, 키맵: \cr
+nnoremap <leader>cr :%s/\r//g<CR> 
+
+
+
 
 
 

@@ -123,3 +123,4 @@ cd /home/humornoid
 . "$HOME/.cargo/env"
 
 source /home/humornoid/.config/broot/launcher/bash/br
+

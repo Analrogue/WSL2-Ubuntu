@@ -23,3 +23,5 @@
  ReadTags=no
 
  
+SoundDriver = ALSA
+ALSADevice = default

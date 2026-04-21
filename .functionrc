@@ -85,7 +85,33 @@ fdfd() {
 
   file=$(fd -t f "$@" . "$dir" | fzy) || return 1
   cd "$(dirname "$file")"
+  echo "$file"
 }
+
+fdfde() {
+  local dir file editor
+
+  # 기본 editor
+  editor="vim"
+
+  # 첫 인자가 editor 옵션이면 처리
+  case "$1" in
+    n) editor="nano"; shift ;;
+    v) editor="vim"; shift ;;
+  esac
+
+  # dir
+  dir="${1:-.}"
+  shift
+
+  # 파일 선택
+  file=$(fd . "$@" "$dir" | fzy) || return 1
+
+  cd "$(dirname "$file")"
+  "$editor" "$file"
+}
+
+
 
 
 

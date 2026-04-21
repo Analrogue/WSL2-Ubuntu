@@ -20,6 +20,8 @@ export PULSE_SERVER="tcp:$HOST_IP"
 
 # Fzf
 export FZF_DEFAULT_COMMAND="fdfind --hidden --strip-cwd-prefix --exclude=.git"
+export FZF_DEFAULT_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'" # bat colorized pager, line number, load reduction
+FZF_DEFAULT_OPTS+=" --bind 'd:preview-half-page-down,u:preview-half-page-up,f:preview-page-down,b:preview-page-up'" # preview key control
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fdfind --type=d --hidden --strip-cwd-prefix --exclude=.git"
 
@@ -72,6 +74,8 @@ export BAT_THEME="Dracula"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$HOME/.local/share:$HOME/.local/bin:$PATH"
 export PATH="$PATH:/snap/bin"
+
+
 
 # Startup
 fm6000 -rd ~/.dotfiles/.github/WSL2-Ubuntu/.asciiarts --color random -d WSL2

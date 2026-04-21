@@ -1,0 +1,9 @@
+[Unit]
+Description=Dummy tail service
+
+[Service]
+ExecStart=/usr/bin/tail -f /dev/null
+Restart=always
+
+[Install]
+WantedBy=default.target
